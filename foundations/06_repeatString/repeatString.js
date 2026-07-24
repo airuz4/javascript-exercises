@@ -1,14 +1,16 @@
 const repeatString = function(string, repeat) {
+    if (repeat < 0){
+        return 'ERROR';
+    }
     let i = 0;
-
-    while (i <= repeat){
-        let outputString = '';
+    let outputString = '';
+    while (i < repeat){
         outputString += string;
+        i++;
     }
     return outputString;
 };
 
-repeatString('hey', 3) // returns 'heyheyhey'
 
 // Do not edit below this line
 module.exports = repeatString;
